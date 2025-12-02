@@ -1,0 +1,49 @@
+/**
+ * @author simone napolitano
+ * @version 1.0
+ */
+
+
+// 1. Ottiene i riferimenti usando l'ID
+        const form = document.getElementById('quizForm'); 
+        const risultatoDiv = document.getElementById('risultato');
+        
+        // Array che contiene gli ID di TUTTI i radio button della domanda
+        const ID_RADIO = ['radioA', 'radioB', 'radioC', 'radioD'];
+
+        // Listener che aspetta il click sul pulsante (submit)
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Blocca il ricaricamento pagina
+            trovaSelezioneManuale();
+        });
+
+
+        /**
+         * Funzione che trova l'input selezionato scorrendo gli ID
+         */
+        function trovaSelezioneManuale() {
+            let selezioneTrovata = false;
+
+            // Ciclo for classico, come in C/Java
+            for (let i = 0; i < ID_RADIO.length; i++) {
+                
+                // 1. Prende l'elemento corrente usando il suo ID
+                const radioCorrente = document.getElementById(ID_RADIO[i]);
+                
+                // 2. Controlla la proprietà '.checked' (è vera/true se l'utente l'ha selezionata)
+                if (radioCorrente.checked === true) {
+                    
+                    // 3. Abbiamo trovato la selezione! Aggiorniamo l'output
+                    const valore = radioCorrente.value;
+                    risultatoDiv.innerHTML = "Risposta Selezionata: <strong>" + valore + "</strong>";
+                    selezioneTrovata = true;
+                    
+                    // 4. Usciamo dal ciclo con 'break' (non serve controllare gli altri)
+                    break; 
+                }
+            }
+
+            if (!selezioneTrovata) {
+                 risultatoDiv.innerHTML = "Risposta Selezionata: **DEVI SELEZIONARE UN'OPZIONE**";
+            }
+        }

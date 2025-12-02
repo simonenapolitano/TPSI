@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolatrice</title>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <div class="calc">
+        <input class="inputcalc" type="number" id="risultatocalc" placeholder="Risultato" readonly>
+        <table cellspacing="25px">
+            <tr>
+                <td><button class="btncalcfil1" onclick="del()"><img src="assets/img/backspace_50dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png" alt=""></button></td>
+                <td><button class="btncalcfil1" onclick="ac()">AC</button></td>
+                <td><button class="btncalcfil1" onclick="nondisp()">%</button></td>
+                <td><button class="btncalc1" onclick="uguale()">=</button></td>
+            </tr>
+            <tr>
+                <td><button class="btncalc" onclick="num7()">7</button></td>
+                <td><button class="btncalc" onclick="num8()">8</button></td>
+                <td><button class="btncalc" onclick="num9()">9</button></td>
+                <td><button class="btncalc1" onclick="div()">÷</button></td>
+            </tr>
+            <tr>
+                <td><button class="btncalc" onclick="num4()">4</button></td>
+                <td><button class="btncalc" onclick="num5()">5</button></td>
+                <td><button class="btncalc" onclick="num6()">6</button></td>
+                <td><button class="btncalc1" onclick="mult()">X</button></td>
+            </tr>
+            <tr>
+                <td><button class="btncalc" onclick="num1()">1</button></td>
+                <td><button class="btncalc" onclick="num2()">2</button></td>
+                <td><button class="btncalc" onclick="num3()">3</button></td>
+                <td><button class="btncalc1" onclick="sott()">-</button></td>
+            </tr>
+            <tr>
+                <td><button class="btncalc" onclick="nondisp()"></button></td>
+                <td><button class="btncalc" onclick="num0()">0</button></td>
+                <td><button class="btncalc" onclick="nondisp()">.</button></td>
+                <td><button class="btncalc1" onclick="somma()">+</button></td>
+            </tr>
+        </table>
+    </div>
+    <input class="primnum" type="hidden" id="primonumero" readonly>
+    <input class="primnum" type="hidden" id="operazione" readonly>
+    <script src="src/js/script.js"></script>
+</body>
+</html>
