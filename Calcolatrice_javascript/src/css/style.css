@@ -4,9 +4,7 @@ input{
     color: white;
 }
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-items: center;
     min-height: 100%;
 }
 .primnum{
@@ -16,7 +14,7 @@ body{
     background-color: black;
     width: fit-content;
     height: fit-content;
-    border-radius: 10%;
+    border-radius: 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,6 +32,9 @@ body{
 .btncalc:hover{
     opacity: 0.7;
 }
+.btncalc:active{
+    opacity: 0.5;
+}
 .btncalcfil1{
     height: 80px;
     width: 80px;
@@ -47,6 +48,9 @@ body{
 .btncalcfil1:hover{
     opacity: 0.7;
 }
+.btncalcfil1:active{
+    opacity: 0.5;
+}
 .btncalc1{
     height: 80px;
     width: 80px;
@@ -56,6 +60,9 @@ body{
 }
 .btncalc1:hover{
     opacity: 0.7;
+}
+.btncalc1:active{
+    opacity: 0.5;
 }
 .inputcalc{
     width: 75%;
