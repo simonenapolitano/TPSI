@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Radio Quiz</title>
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+        <div class="header">
+            <h1>QUIZ SULLE FUNZIONI IN JAVASCRIPT</h1>
+        </div>
+        <div class="domanda">
+            <h2>Qual e' la funzione JavaScript per generare un numero casuale tra 0 e 1?</h2>
+            <form id="domanda1">
+                <div>Scegli la risposta corretta:</div>
+                <label>
+                    <input type="radio" name="risposta_q1" value="Math.ceil()" id="q1A" />Math.ceil() 
+                </label><br>
+                <label>
+                    <input type="radio" name="risposta_q1" value="Math.random()" id="q1B"/>Math.random() 
+                </label><br>
+                <label>
+                    <input type="radio" name="risposta_q1" value="Random.value()" id="q1C"/>Random.value()
+                </label><br>
+            </form>
+        </div>
+        <div class="domanda">
+            <h2>Quale metodo viene usato per aggiungere un nuovo elemento al DOM?</h2>
+            <form id="domanda2">
+                <div>Scegli la risposta corretta:</div>
+                <label>
+                    <input type="radio" name="risposta_q2" value="document.updateElement()" id="q2A">document.updateElement()
+                </label><br>
+                <label>
+                    <input type="radio" name="risposta_q2" value="element.setHTML()" id="q2B">element.setHTML()
+                </label><br>
+                <label>
+                    <input type="radio" name="risposta_q2" value="parentNode.appendChild()" id="q2C">parentNode.appendChild()
+                </label><br>
+            </form>
+        </div>
+        <div class="domanda">
+            <h2>In JavaScript, cosa significa l'operatore "==="?</h2>
+            <form id="domanda3">
+                <div>Scegli la risposta corretta:</div>
+                <label>
+                    <input type="radio" name="risposta_q3" value="Uguaglianza(solo valore)" id="q3A">Uguaglianza (solo valore)
+                </label><br>
+                <label>
+                    <input type="radio" name="risposta_q3" value="AssegnazioneConTipo" id="q3B">Assegnazione con tipo
+                </label><br>
+                <label>
+                    <input type="radio" name="risposta_q3" value="UguaglianzaStretta(valoreETipo)" id="q3C">Uguaglianza stretta (valore e tipo)
+                </label><br>
+            </form>
+        </div>
+        <button onclick="calcolaPunteggio()" id="bottoneConsegna">Consegna test</button>
+        <div id="risultato">PUNTEGGIO QUI ALLA FINE DEL TEST</div>
+    </div>
+    
+    
+    <script src="src/js/script.js"></script>
+  </body>
+</html>
