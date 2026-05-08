@@ -1,0 +1,22 @@
+@startuml
+start
+:Paziente arriva in clinica;
+:Notifica alla segretaria;
+if (Posti disponibili) then (Sì)
+    :Segretaria accetta l'arrivo del paziente;
+    :Medico effettua la visita sul paziente;
+    :Medico aggiorna la cartella clinica del paziente;
+    :Medico compila il referto;
+    :Medico prescrive un'eventuale terapia/esame;
+    :Paziente esce dalla clinica torna a casa;
+else (No)
+    :Segretaria rifiuta l'arrivo del paziente;
+
+endif
+
+
+
+
+stop
+
+@enduml

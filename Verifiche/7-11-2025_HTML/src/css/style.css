@@ -1,0 +1,118 @@
+body{
+    padding: 1%;
+
+    
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+}
+
+input[type="text"]{
+    padding: 3%;
+    border-radius: 2px;
+    border: 1px solid black;
+}
+
+#risultatoCalc{
+    background-color: rgb(128, 128, 128);
+    color: white;
+}
+
+select{
+    padding: 3%;
+    border-radius: 2px;
+    border: 1px solid black;
+    width: 100%;
+}
+
+.login{
+    border-radius: 8px;
+    background-color: #cdee3b81;
+    border: solid 2px #90a72981;
+    padding: 10%;
+    width: 100%;
+}
+
+.calcolatrice{
+    border-radius: 8px;
+    background-color: #7af07681;
+    border: solid 2px #5bb45881;
+    padding: 10%;
+    width: 100%;
+}
+
+.consegna{
+    border-radius: 8px;
+    background-color: #e0464681;
+    border: solid 2px #7a252581;
+    padding: 10%;
+    width: 100%;
+}
+
+.container1{
+    border-radius: 8px;
+    background-color: #72bdc081;
+    border: solid 2px #457475;
+    padding: 2%;
+    margin-right: 1%;
+    width: 75%;
+}
+
+.quesitoTesto{
+    position: absolute;
+}
+
+button{
+    cursor: pointer;
+    color: white;
+}
+
+#correggiVerificaBtn{
+    padding: 1%;
+    text-align: center;
+    background-color: rgb(40, 75, 189);
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+}
+
+#accediBtn{
+    padding: 5%;
+    text-align: center;
+    background-color: black;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+}
+
+#calcolaBtn{
+    padding: 5%;
+    text-align: center;
+    background-color: black;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+}
+
+#terminaCompitoBtn{
+    padding: 5%;
+    text-align: center;
+    background-color: rgb(204, 21, 21);
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+}
+
+.quesito{
+    background-color: white;
+    padding: 2%;
+    width: 95%;
+    border-radius: 8px;
+    border: solid 2px #457475;
+}

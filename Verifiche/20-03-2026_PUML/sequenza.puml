@@ -1,0 +1,26 @@
+@startuml
+
+actor Paziente as p
+actor Medico as m
+actor Segretaria as s
+participant Clinica as c
+
+activate c
+p -> c : Si reca in clinica
+c --> s : Notifica la segretaria
+alt Posti disponibili
+    s -> c : Accetta l'arrivo del paziente
+    c --> m : Notifica il medico dell'arrivo del paziente
+    m -> c : Visita il paziente e\naggiorna la sua cartella clinica
+    c --> m : Visita terminata
+    m -> c : Compila il referto\nPrescrive eventuale terapia/esame
+else Posti non disponibili
+    s -> c : Rifiuta l'arrivo del paziente
+end
+c --> p : Esce dalla clinica torna a casa
+deactivate c
+
+
+
+
+@enduml

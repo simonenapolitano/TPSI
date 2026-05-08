@@ -1,0 +1,57 @@
+@startuml
+class Persona{
+    -nome : String
+    -cognome : String
+    --
+    +getNome() : String
+    +setNome(nome : String) : void
+    +getCognome() : String
+    +setCognome(cognome : String) : void
+}
+class Paziente extends Persona{
+    -cartellaClinica : ArrayList<Visita>
+    --
+    +addVisita() : void
+    +getVisita(index : int) : Visita        
+}
+class Segretaria extends Persona{
+    +accettaArrivoPaziente() : boolean
+    +rifiutaArrivoPaziente() : boolean
+}
+class Medico extends Persona{
+    -repartoAppartenenza : Reparto
+    -inVisita : boolean
+    --
+    +getRepartoAppartenenza() : Reparto
+    +setRepartoAppartenenza() : void
+    +isInVisita() : boolean
+    +setInVisita() : void 
+}
+class Reparto{
+    -mediciDelReparto : ArrayList<Medico>
+    --
+    +addMedico() : void
+    +getMedico(index : int) : Medico
+}
+class Visita{
+    -nomeVisita : String
+    -esitoVisita : String
+    -orarioVisita : LocalDateTime
+    -dataVisita : LocalDateTime
+    --
+    +getNomeVisita() : String
+    +setNomeVisita(nomeVisita : String) : void 
+    +getEsitoVisita() : String
+    +setEsitoVisita(esitoVisita : String) : void
+}
+
+Medico "1..*" --o "1" Reparto : > Appartengono 
+Visita "1..*" --* "1" Paziente : < Fanno
+note right of Visita : Dopo l'esito il paziente può fare la \nterapia assegnata dal medico
+
+
+
+
+
+
+@enduml

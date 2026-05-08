@@ -1,0 +1,22 @@
+@startuml
+state "Paziente prenota una visita" as paz
+state "Posti non disponibili" as pos
+state "Medico effettua la visita sul paziente" as pre
+state "Medico aggiorna la cartella clinica" as md
+state "Medico compila il referto" as com
+state "Medico assegna terapia al paziente" as ter
+[*] --> paz
+paz --> pre
+paz --> pos
+pos --> [*]
+pre --> md : addVisita()\n[Alla cartella clinica del paziente]
+md --> com
+com --> ter
+ter --> [*]
+
+
+
+
+
+
+@enduml

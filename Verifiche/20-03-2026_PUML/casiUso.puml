@@ -1,0 +1,31 @@
+@startuml
+left to right direction
+actor :Paziente: as ut
+actor :Medico: as md
+actor :Segretaria: as sg
+
+
+rectangle "Sistema medico"{
+    usecase "Si reca in clinica" as reca
+    usecase "Notifica alla segretaria" as not
+    usecase "Accetta l'arrivo" as acc
+    usecase "Rifiuta l'arrivo" as rif
+    usecase "Visita il paziente" as vis
+    usecase "Aggiorna cartella clinica" as agg
+    usecase "Compila referto" as com
+    usecase "Prescrive terapia/esame" as pre
+}
+ut --> reca 
+reca ..> not : <<include>>
+sg ..> acc : <<include>>\n(Se posti disponibili)
+sg ..> rif : <<extend>>\n(Se i posti non sono disponibili)
+md --> vis 
+md --> agg
+ut ..> vis : <<include>>\nsi reca alla visita
+md --> com
+md --> pre
+
+
+
+
+@enduml
